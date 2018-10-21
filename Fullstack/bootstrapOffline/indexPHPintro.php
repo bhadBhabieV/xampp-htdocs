@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -15,9 +15,10 @@
     <body>
         <!-- <h1>Hello, world!</h1> -->
         <h1><?php echo "Helloooo!"; ?></h1>
-        <!-- <?php echo "Hello!"; ?> -->
 
-        <?php phpinfo(); ?>
+        <?php echo "Hello!"; ?>
+
+        <!-- <?php phpinfo(); ?> -->
 
         <!-- Test3 -->
 
