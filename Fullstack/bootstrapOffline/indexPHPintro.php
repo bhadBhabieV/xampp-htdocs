@@ -46,7 +46,7 @@
 
         <h1>This is the end of the test</h1>
 
-        <!-- <?php phpinfo(); ?> -->
+        <?php phpinfo(); ?>
 
         <!-- <script src="js/dom.js"></script> -->
     </body>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>PHP form test</title>
+  </head>
+  <body>
+
+  <style>
+    nput, textarea {
+      margin: 5px;
+    }
+  </style>
+
+   <h1>please fill in the form</h1>
+
+  <form action="formtest.php" method="post">
+  <fieldset>
+    <legend> my test form </legend>
+    <label>first name</label>
+    <input type ="text" name="fname" size="40" /><br />
+    <label>last name</label>
+    <input type ="text" name="lname" size="40" /><br />
+    <fieldset>
+      <legend> select your favorite sport </legend>
+      <input type ="radio" name="sport" value="baseball" />baseball<br />
+      <input type ="radio" name="sport" value="football" />football<br />
+      <input type ="radio" name="sport" value="hockey" />hockey<br />
+      <input type ="radio" name="sport" value="soccer" />soccer<br />
+    </fieldset>
+
+    <label>please type yor essay</label>
+    <textarea name="essay" cols="50" rows="10"></textarea><br />
+    <input type="submit" value"submit your form" />
+
+  </fieldset>
+
+  </form>
+
+   <!-- <a href="linktest2.php?content=buy">Buy products</a><br /> -->
+   <!-- <a href="linktest2.php?content=browse">Browse for products</a><br /> -->
+   <!-- <a href="linktest2.php?content=help">I need assistance</a><br /> -->
+
+  </body>
+</html>
