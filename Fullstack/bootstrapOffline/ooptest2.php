@@ -35,7 +35,7 @@
       }
 
       public function __toString() {
-        $output = "<p>Product: " . $this.description . "<br />\n";
+        $output = "<p>Product: " . $this->description . "<br />\n";
         $output .= "Price: $" . number_format($this->price, 2) . "<br />\n";
         $output .= "Inventory: " . $this->inventory . "<br />\n";
 
