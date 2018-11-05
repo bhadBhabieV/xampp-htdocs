@@ -13,9 +13,13 @@ if (!isset($_SESSION['login'])) {
   <br />
   <br />
   <input type="submit" value="Login" />
-  <input type="hidden" name="content" value="validate"
-
+  <input type="hidden" name="content" value="validate" />
   </form>
+
+  <script language = javascript>
+    document.login.userid.focus();
+    document.login.userid.select();
+  </script>
 
   <?php
 } else {
@@ -27,9 +31,3 @@ if (!isset($_SESSION['login'])) {
 }
 
 ?>
-
-
-<script language = javascript>
-  document.login.userid.focus();
-  document.login.userid.select();
-</script>

@@ -17,5 +17,6 @@ if (isset($name)) {
 } else {
   echo "<h2>Sorry, login incorrect</h2>\n";
   echo "<a href=\"index.php\">Please try again</a>\n";
-  
- ?>
+
+}
+?>
