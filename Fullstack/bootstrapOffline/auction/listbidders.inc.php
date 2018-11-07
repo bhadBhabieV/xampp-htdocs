@@ -22,6 +22,8 @@ foreach($bidders as $bidder) {
   $bidderid = $bidder->bidderid;
   $name = $bidderid . " - " . $bidder->lastname . ", " . $bidder->firstname;
   echo "<option value=\"$bidderid\">$name</option>\n";
+  // echo "$bidderid\n";
+  // echo "<h2>$bidder->bidderid</h2>\n";
 }
 echo "</select><br /><br />\n";
 

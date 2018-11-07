@@ -58,8 +58,8 @@ class Bidder {
 
     if (mysqli_num_rows($result) > 0) {
       $bidders = array();
-      while($row = $result->fetch_array(MYSQSLI_ASSOC)) {
-        $bidder = new Bidder($row['bidderId'], $row['lastname'], $row['firstname'], $row['address'], $row['phone']);
+      while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+        $bidder = new Bidder($row['bidderid'], $row['lastname'], $row['firstname'], $row['address'], $row['phone']);
         array_push($bidders, $bidder);
         unset($bidder);
       }
@@ -76,9 +76,9 @@ class Bidder {
     $db = new mysqli("localhost", "ah_user", "AuctionHelper", "auction");
     $query = "SELECT * FROM bidders WHERE bidderid = $bidderid";
     $result = $db->query($query);
-    $row = $result->fetch_array(MYSQSLI_ASSOC);
+    $row = $result->fetch_array(MYSQLI_ASSOC);
     if ($row) {
-      $bidder = new Bidder($row['bidderId'], $row['lastname'], $row['firstname'], $row['address'], $row['phone']);
+      $bidder = new Bidder($row['bidderid'], $row['lastname'], $row['firstname'], $row['address'], $row['phone']);
       $db->close();
       return $bidder;
     }

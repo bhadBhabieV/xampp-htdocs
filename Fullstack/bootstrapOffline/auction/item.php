@@ -62,7 +62,7 @@ class Item {
 
     if (mysqli_num_rows($result) > 0) {
       $items = array();
-      while($row = $result->fetch_array(MYSQSLI_ASSOC)) {
+      while($row = $result->fetch_array(MYSQLI_ASSOC)) {
         $item = new Item($row['itemid'], $row['name'], $row['description'], $row['resaleprice'], $row['winbidder'], $row['winprice']);
         array_push($items, $item);
       }
@@ -80,10 +80,10 @@ class Item {
     $query = "SELECT * FROM items WHERE winbidder = $bidderid";
     $result = $db->query($query);
 
-    if (mysqsli_num_rows($result) > 0) {
+    if (mysqli_num_rows($result) > 0) {
       $items = array();
 
-      while($row = $result->fetch_array(MYSQSLI_ASSOC)) {
+      while($row = $result->fetch_array(MYSQLI_ASSOC)) {
         $item = new Item($row['itemid'], $row['name'], $row['description'], $row['resaleprice'], $row['winbidder'], $row['winprice']);
         array_push($items, $item);
       }
@@ -100,7 +100,7 @@ class Item {
     $db = new mysqli("localhost", "ah_user", "AuctionHelper", "auction");
     $query = "SELECT * FROM items WHERE itemid = $itemid";
     $result = $db->query($query);
-    $row = $result->fetch_array(MYSQSLI_ASSOC);
+    $row = $result->fetch_array(MYSQLI_ASSOC);
     if ($row) {
       $item = new Item($row['itemid'], $row['name'], $row['description'], $row['resaleprice'], $row['winbidder'], $row['winprice']);
       $db->close();
